@@ -27,8 +27,8 @@ OrderItem {
   integer ProductID  PK, FK
   integer Quantity 
 }
-Customer }o--|| Person : "FK_Customer_ID"
-Employee }o--|| Person : "FK_Employee_ID"
+Customer ||--|| Person : "FK_Customer_ID"
+Employee ||--|| Person : "FK_Employee_ID"
 Order }o--|| Customer : "FK_Order_CustomerID"
 OrderItem }o--|| Order : "FK_OrderItem_OrderID"
 OrderItem }o--|| Product : "FK_OrderItem_ProductID"
