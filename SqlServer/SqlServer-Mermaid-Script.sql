@@ -194,9 +194,7 @@ BEGIN
     INSERT INTO @mermaidLines (
         MermaidLine
     )
-    SELECT  '  ' + d.MermaidType + ' ' + c.COLUMN_NAME + ' ' +
-            CASE 
-                -- Check if column is both a primary key and a foreign key e.g. composite key of a junction table
+    SELECT  '  ' + d.MermaidType + ' ' + REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(c.COLUMN_NAME, ' ', '_space_'), '-', '_dash_'), '.', '_dot_'), '(', '_lparen_'), ')', '_rparen_'), '[', '_lbracket_'), ']', '_rbracket_'), '/', '_slash_'), '\', '_backslash_'), '#', '_hash_'), '&', '_and_') + ' ' +   CASE    -- Check if column is both a primary key and a foreign key e.g. composite key of a junction table
                 WHEN pk.COLUMN_NAME IS NOT NULL 
                     AND fk.FK_COLUMN IS NOT NULL 
                     THEN ' PK, FK'
