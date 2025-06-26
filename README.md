@@ -3,7 +3,7 @@ SQL Scripts to generate a [Mermaid](https://mermaid-js.github.io/) `erDiagram` s
 
 ## Features
 
-- Extracts  database schema information
+- Extracts database schema information
 - Generates [Mermaid](https://mermaid-js.github.io/) `erDiagram` code
 - Supports tables, columns, and relationships
 
@@ -16,7 +16,7 @@ SQL Scripts to generate a [Mermaid](https://mermaid-js.github.io/) `erDiagram` s
 
 ### Files in `SqlServer` Folder
 
-- `SqlServer-Exmaple-Schema.sql`: Script to crete the example Sql Server database used in this repository.
+- `SqlServer-Example-Schema.sql`: Script to create the example Sql Server database used in this repository.
 - `SqlServer-Mermaid-Script.sql`: The script you will need for Sql Server to convert a database schema to [Mermaid](https://mermaid-js.github.io/) `erDiagram` format.
 - `SqlServer-Example.md`: Example [Mermaid](https://mermaid-js.github.io/) `erDiagram` output from the example database.
 
